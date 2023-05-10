@@ -2,7 +2,9 @@ name: Main
 on:
   push:
     branches: [ main ]
-    
+  release:
+    types: [created]
+  workflow_dispatch: # Put here!!    
 env:
   SPECTRAL_DSN: ${{ secrets.SPECTRAL_DSN }}
 
